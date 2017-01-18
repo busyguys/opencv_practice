@@ -5,20 +5,22 @@ using namespace std;
 using namespace cv;
 
 int main(){
-	Mat diff;
+	Mat background;
 	Mat src;
-	VideoCapture capture("C:\\Users\\Administrator\\Desktop\\Study\\4학년\\공프기\\OpenCV\\freeway.wmv");
+	VideoCapture capture("C:\\Users\\Administrator\\Desktop\\Study\\4학년\\공프기\\OpenCV\\background.mp4");
 	int key;
 	int frame_rate = 30;
 
 	capture >> src;
 
+	background = src;
 
+	imshow("screen", background);
 	while (capture.read(src)){
 
 		imshow("SCREEN", src);
-		cvtColor(src, diff, CV_BGR2GRAY); // Change to Gray
-		imshow("diff", diff);
+		cvtColor(src, background, CV_BGR2GRAY); // Change to Gray
+		imshow("diff", background);
 
 		key = waitKey(frame_rate);
 
