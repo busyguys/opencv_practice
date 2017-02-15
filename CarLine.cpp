@@ -7,7 +7,7 @@ using namespace cv;
 int main(){
 	int i = 0;
 	int key, frame_rate = 30;
-	VideoCapture capture = ("C:\\Users\\Administrator\\Desktop\\Study\\4학년\\공프기\\OpenCV\\TrafficExample\\traffic.mp4");
+	VideoCapture capture = ("C:\\Users\\Administrator\\Desktop\\Study\\4학년\\공프기\\OpenCV\\TrafficExample\\traffic8.mp4");
 	Mat src, det, gray, hough;
 	Mat origin;
 

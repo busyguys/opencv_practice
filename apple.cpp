@@ -32,7 +32,7 @@ int main(){
 
 	copy = morph.clone();
 
-	findContours(copy, contours, hierarchy, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
+	findContours(copy, contours, hierarchy, 0, 2);
 
 	for (i = 0; i < contours.size(); i++){
 		drawContours(src, contours, i, Scalar(0, 255, 0), CV_FILLED, 8, hierarchy);
